@@ -2,6 +2,7 @@ import React from 'react'
 import { push } from 'react-router-redux'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import TextField from 'material-ui/TextField';
 import {
     increment,
     incrementAsync,
@@ -12,6 +13,10 @@ import {
 const Home = props => (
     <div>
       <h1>Home</h1>
+      <TextField
+        defaultValue="Default Value"
+        floatingLabelText="Floating Label Text"
+      />
       <p>Count: {props.count}</p>
 
       <p>

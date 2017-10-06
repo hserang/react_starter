@@ -4,6 +4,7 @@ import {
   Link
 } from 'react-router-dom';
 
+import Button from 'material-ui/Button';
 import Home from '../home';
 import Faq from '../faq';
 
@@ -17,8 +18,12 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">React Starter</h1>
-          <Link to="/">Home</Link>
-          <Link to="/faq">Faq</Link>
+          <Link to="/">
+            <Button>Home</Button>
+          </Link>
+          <Link to="/faq">
+            <Button>Faq</Button>
+          </Link>
         </header>
         <main>
           <Route exact path="/" component={Home}/>

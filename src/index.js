@@ -6,6 +6,7 @@ import store, { history } from './redux/store';
 import App from './containers/app';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
+import 'typeface-roboto';
 
 const target = document.querySelector('#root');
 
