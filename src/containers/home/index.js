@@ -9,9 +9,18 @@ import {
     decrementAsync
 } from '../../redux/modules/counter'
 
+import {
+  Header,
+  List
+} from 'semantic-ui-react';
+
+import DynamicForm from '../../components/dynamicForm';
+
 const Home = props => (
     <div>
-      <h1>Home</h1>
+      <Header as='h1'>Home</Header>
+      <p>This is a basic fixed menu template using fixed size containers.</p>
+      <p>A text container is used for the main container, which is useful for single column layouts.</p>
       <p>Count: {props.count}</p>
 
       <p>
@@ -25,6 +34,7 @@ const Home = props => (
       </p>
 
       <p><button onClick={() => props.changePage()}>Go to faq via redux</button></p>
+      <DynamicForm />
     </div>
 )
 

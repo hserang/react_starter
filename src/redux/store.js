@@ -11,7 +11,14 @@ import rootReducer from './modules';
 
 export const history = createHistory();
 
-const initialState = {};
+const initialState = {
+  form_inputs: [
+    {
+      label: 'step 1'
+    }
+  ]
+
+};
 const enhancers = [];
 const middleware = [
   thunk,

@@ -5,7 +5,7 @@ import { ConnectedRouter } from 'react-router-redux';
 import store, { history } from './redux/store';
 import App from './containers/app';
 import registerServiceWorker from './registerServiceWorker';
-import './index.css';
+import 'semantic-ui-css/semantic.min.css';
 
 const target = document.querySelector('#root');
 

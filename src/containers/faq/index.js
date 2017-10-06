@@ -1,8 +1,12 @@
 import React from 'react';
+import {
+  Header,
+  List
+} from 'semantic-ui-react';
 
 export default() => (
   <div>
-    <h1>FAQ</h1>
+    <Header as='h1'>Faq</Header>
     <p>Some text here</p>
   </div>
 )
