@@ -1,7 +1,3 @@
-// export const INCREMENT_REQUESTED = 'counter/INCREMENT_REQUESTED'
-// export const INCREMENT = 'counter/INCREMENT'
-// export const DECREMENT_REQUESTED = 'counter/DECREMENT_REQUESTED'
-
 // when naming actions, namespace them by the file to prevent collisions
 export const CREATE_INPUT = "form/CREATE_INPUT";
 export const DELETE_INPUT = "form/DELETE_INPUT";
@@ -35,7 +31,7 @@ export default (state = initialState, action) => {
             ...item,
             value: action.value,
             id: action.id
-          }
+          };
         }
 
         return item;
@@ -54,7 +50,7 @@ export const createInput = () => {
 };
 
 export const updateValue = data => {
-  const {value, id} = data;
+  const { value, id } = data;
 
   return dispatch => {
     dispatch({
@@ -64,43 +60,3 @@ export const updateValue = data => {
     });
   };
 };
-
-// export const incrementAsync = () => {
-//   return dispatch => {
-//     dispatch({
-//       type: INCREMENT_REQUESTED
-//     })
-
-//     return setTimeout(() => {
-//       dispatch({
-//         type: INCREMENT
-//       })
-//     }, 3000)
-//   }
-// }
-
-// export const decrement = () => {
-//   return dispatch => {
-//     dispatch({
-//       type: DECREMENT_REQUESTED
-//     })
-
-//     dispatch({
-//       type: DECREMENT
-//     })
-//   }
-// }
-
-// export const decrementAsync = () => {
-//   return dispatch => {
-//     dispatch({
-//       type: DECREMENT_REQUESTED
-//     })
-
-//     return setTimeout(() => {
-//       dispatch({
-//         type: DECREMENT
-//       })
-//     }, 3000)
-//   }
-// }

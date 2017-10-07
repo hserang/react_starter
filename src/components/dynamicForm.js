@@ -6,6 +6,14 @@ import { createInput, updateValue } from "../redux/modules/form";
 
 // Form state with controlled components relies heavily on props
 // used a class here as passing the props to all methods was unwieldy
+const sillyString = [
+  "Enter the dragon",
+  "Golden Gate Girl",
+  "Too Late for Divorce",
+  "Fist of Unicorn",
+  "Death by Misadventure"
+];
+
 class DynamicForm extends React.Component {
   constructor(props) {
     super(props);
@@ -42,7 +50,7 @@ class DynamicForm extends React.Component {
           }}
           id={currentItem.id}
           name={"name-" + currentItem.id}
-          placeholder="Enter the Dragon"
+          placeholder={sillyString[Math.floor(Math.random()*sillyString.length)]}
           onChange={this.handleChange}
           value={currentItem.value}
         />
@@ -52,7 +60,7 @@ class DynamicForm extends React.Component {
     return (
       <Input
         placeholder="Enter the Dragon"
-          onChange={this.handleChange}
+        onChange={this.handleChange}
         value={currentItem.value}
         id={currentItem.id}
       />
@@ -72,7 +80,7 @@ class DynamicForm extends React.Component {
 
   getSubmitButton() {
     if (this.props.formItems.length > 2) {
-      return <Button>I'm so done</Button>;
+      return <Button>I am so done with this</Button>;
     }
 
     return "";
